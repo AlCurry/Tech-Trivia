@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- 
+  Tech Trivia Game
+
+Optional Homework Assignment  - html, javascript, and jquery game 
+              Answer multiple choice tech trivia questions within the time limit per question
+
+Al Curry  February 22, 2018
+
+GWU full stack development program  
+
+this module  calls triviaGame.js, uses Bootstrap & Animate css
+
+pseudo code for this module: 
+
+    start game
+    display first question and 4 possible answers
+    set timer with 15 seconds to answer
+    select answer
+    declare answer right or wrong
+    track score
+
+    While this is not complete, the skeleton is in place,  for the most part. I'd like to move the questions and answers out to a separate file, possibly in json format, that would be read in at the start of the game.   And make improvements to the ui including
+      - better effects on CORRECT or WRONG answers
+      - more questions
+      - score tracking and display
+      - more responsive testing - i focused on phone size here
+      and
+     -  clean up the code as needed 
+ -->
+  
+
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech Trivia Game</title>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap  4.0 - does not require reset.css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+<div id="parent">
+    <div class="jumbotron" id="bg">
+        <h1 id="hdr">
+            Tech Trivia</h1>
+    </div>
+
+    <div class="container text-black text-center fill">
+        <p id="mainPrompt">Click start for the first question
+        </p>
+
+        <div id="timer">Time remaining:
+            <span id="countDisplay"></span> seconds
+        </div>
+
+        <div id="score">
+
+            <span id="qNum"></span>
+            </span>
+            <span id="qText"></span>
+
+            <br />
+
+            <div id="outArea1">
+                <div id="ans1" class="answer"></div>
+                <div id="ans2" class="answer"></div>
+                <div id="ans3" class="answer"></div>
+                <div id="ans4" class="answer"></div>
+                <div id="result"></div>
+            </div>
+
+            <!--   <br /> Wins:
+            <span id="win"></span>
+            <br />
+            <br /> Losses:
+            <span id="lose"></span>
+            <br />
+            <br /> -->
+
+            <div id="buttons">
+                <button id="start" class="startButton">Start</button>
+            </div>
+
+
+            <br />
+            <h2 id="overText"></h2>
+        </div>
+    </div>
+    <div class="jumbotron" id="bg2">
+        <h3 class="text-center" id="gameOver">
+            Tech Trivia</h3>
+    </div>
+</div>
+    <script src="./assets/javascript/triviaGame.js"></script>
+</body>
+
+</html>

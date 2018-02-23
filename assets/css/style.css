@@ -1,0 +1,117 @@
+
+/*
+  Tech Trivia Game
+
+Optional Homework Assignment  - html, javascript, and jquery game 
+              Answer multiple choice tech trivia questions within the time limit per question
+
+Al Curry  February 22, 2018
+
+GWU full stack development program  
+
+this module invoked by index.html 
+*/
+html,body{height:100%;
+    font-size: 20px;
+    background-color: rgb(0, 174, 255);
+}
+
+.container {
+    /* height:100%; */
+    /* text-align: center; */
+}
+#parent{
+    height: 100vh;
+}
+#bg {
+    background-image: url("../images/assembler.png");
+    /* background-repeat: no-repeat; */
+    border-radius: 0;
+    background-position: center;
+    color: rgb(163, 245, 109);
+ }
+ 
+ #bg2 {
+    background-image: url("../images/serverroom.jpg");
+    /* background-repeat: no-repeat; */
+    border-radius: 0;
+    background-position: center;  
+    color: rgb(163, 245, 109);
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+ }
+
+ #h1, #overText {
+     color: rgba(20, 22, 24, 0.975);
+     font-weight: bold;
+ }
+
+ #buttons {
+     margin: 0 auto;
+     text-align: center;
+ }
+
+.answer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ans1, #ans2, #ans3, #ans4 {
+    border: 1px solid black;
+  /*   padding: 10px 10px 10px 10px; */
+    font-size: 16px;
+    vertical-align: middle;
+    margin: 5px; 
+    height: 50px;
+    text-align:  center;
+    width: 47%;
+    float: left;
+    background-color: rgb(163, 245, 109);
+    border-radius: 5px;
+}
+
+.startButton {
+    border: 1px solid black;
+
+  /*   padding: 10px 10px 10px 10px; */
+    font-size: 16px;
+    margin: 0 auto; 
+    height: 50px;
+    text-align:  center;
+    width: 60%;
+/*     float: left; */
+    background-color: rgb(163, 245, 109);
+    border-radius: 5px;
+}
+
+ .text-white {
+     font-weight: 600;  
+     font-size: 30px;
+ }
+
+ #outArea1 {
+     /* position: relative; */
+/*       border: 2px solid pink; */
+      height:  130px !important;
+      font-size: 25px;
+      text-align: center;
+      border-radius: 5px;
+ }
+
+ #countDisplay {
+    font-family: monospace;
+    font-size: 30px;
+    width: 20%;
+    color: rgb(0, 174, 255); 
+    margin: auto;
+    /* margin-left: 80%; */
+  
+    /* Typography */
+    text-align: center;
+  
+    /* Visual */
+    background: black;
+  }
